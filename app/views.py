@@ -17,7 +17,7 @@ def hello(request: HttpRequest) -> HttpResponse:
 
 
 def hi_name(request, name):
-    user = name
+    user = name.upper()
     return HttpResponse(f"Hey {name}")
 
 
