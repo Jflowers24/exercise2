@@ -5,7 +5,7 @@ from django.http.response import HttpResponse
 # Create your views here.
 
 
-def calc(request, end, birthyear):
+def calc(request, end, birthyear)-> HttpResponse:
     endyear = end
     birth = birthyear
     result = endyear - birth
@@ -16,12 +16,12 @@ def hello(request: HttpRequest) -> HttpResponse:
     return HttpResponse("Hello World")
 
 
-def hi_name(request, name):
+def hi_name(request, name)-> HttpResponse :
     user = name.upper()
     return HttpResponse(f"Hey {name}")
 
 
-def order(request, burgers, fries, drinks):
+def order(request, burgers, fries, drinks)-> HttpResponse:
     frynum = fries
     burgnum = burgers
     drinknum = drinks
@@ -34,7 +34,7 @@ def order(request, burgers, fries, drinks):
     return HttpResponse(ordertotal)
 
 
-def addnum(request, num1, num2):
+def addnum(request, num1, num2)-> HttpResponse:
     x = num1
     y = num2
     totat = x + y
