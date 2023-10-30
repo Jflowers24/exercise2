@@ -3,11 +3,11 @@ from django.test import SimpleTestCase
 
 class TestHeyYou(SimpleTestCase):
     def test_hey_nate(self):
-        response = self.client.get("/hey/nate")
+        response = self.client.get("/Hey/nate")
         self.assertContains(response, "Hey, nate!")
 
     def test_hey_bcca(self):
-        response = self.client.get("/hey/BCCA")
+        response = self.client.get("/Hey/BCCA")
         self.assertContains(response, "Hey, BCCA!")
 
 

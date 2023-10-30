@@ -23,8 +23,8 @@ from app.views import order
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("age-in/<int:end>/<int:birthyear>/", calc),
-    path("hello/", hello),
-    path("Hey/<name>/", hi_name),
-    path("order-total/<int:burgers>/<int:fries>/<int:drinks>/", order),
+    path("age-in/<int:end>/<int:birthyear>", calc),
+    path("hello", hello),
+    path("Hey/<name>", hi_name),
+    path("order-total/<int:burgers>/<int:fries>/<int:drinks>", order),
 ]
